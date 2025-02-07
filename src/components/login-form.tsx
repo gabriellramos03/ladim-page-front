@@ -9,7 +9,9 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import Link from "next/link"  // Importando o Link
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
+
+import Link from "next/link"
 
 export function LoginForm({
   className,
@@ -74,10 +76,12 @@ export function LoginForm({
                   </div>
                   <Input id="password" type="password" placeholder="senha" required />
                 </div>
-                <Link href="/dashboard">  {/* Usando Link para redirecionamento */}
-                  <Button type="button" className="w-full">
-                    Login
-                  </Button>
+                <Link href="/dashboard">
+                  <ShimmerButton className="py-2 px-4 w-44 ml-20">
+                    <span className="whitespace-pre-wrap text-center text-xs font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-sm">
+                      Login
+                    </span>
+                  </ShimmerButton>
                 </Link>
               </div>
               <div className="text-center text-sm">
