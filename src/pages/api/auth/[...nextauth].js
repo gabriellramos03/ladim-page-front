@@ -33,7 +33,6 @@ export default NextAuth({
         return null;
       },
     }),
-    // GitHub and Google login are already configured
     {
       provider: "github",
       clientId: process.env.GITHUB_CLIENT_ID,
